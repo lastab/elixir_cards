@@ -21,7 +21,7 @@ defmodule Cards do
     suits = ["Spades", "Clubs", "Hearts", "Diamonds"]
 
     for suit <- suits, value <- values do
-      "#{suit} of #{value}"
+      "#{value} of #{suit}"
     end
   end
 
@@ -33,7 +33,7 @@ defmodule Cards do
     Enum.member?(deck, card)  
   end
 
-  def deal(deal, hand_sizee) do
+  def deal(deck, hand_size) do
     Enum.split(deck, hand_size)
   end
 end
